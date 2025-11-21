@@ -41,7 +41,7 @@ _Descargo: Este resumen es solo con fines académicos y NO constituye diagnósti
 # Cuando se usa Flask con templates en la misma carpeta, es necesario este cambio.
 # Si el index.html está en la carpeta "templates", volver a usar la #1 de abajo
 #1 app = Flask(__name__)
-app = Flask(__name__, template_folder='.')
+
 
 def _transcribir(audio_file_path: str) -> str:
     with open(audio_file_path, "rb") as f:
@@ -158,8 +158,6 @@ def process():
 #if __name__ == "__main__":
     #app.run(host="127.0.0.1", port=7860, debug=False)
 
-#Para hacer launch desde railway o un servidor
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 7860))
-    app.run(host="0.0.0.0", port=port)
+
+
 
