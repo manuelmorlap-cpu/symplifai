@@ -1,0 +1,5 @@
+Flask==3.0.3
+Werkzeug==3.0.3
+openai>=1.51.0,<2
+python-dotenv==1.0.1
+audioop-lts; python_version>="3.13"
