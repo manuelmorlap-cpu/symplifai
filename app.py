@@ -8,8 +8,8 @@ from openai import OpenAI
 
 # Cuando se usa Flask con templates en la misma carpeta, es necesario este cambio.
 # Si el index.html está en la carpeta "templates", volver a usar la #1 de abajo
-#1 app = Flask(__name__)
-app = Flask(__name__, template_folder='.')
+app = Flask(__name__)
+#app = Flask(__name__, template_folder='.')
 
 # Cargar variables de entorno
 load_dotenv()
@@ -157,6 +157,7 @@ def process():
 #Para hacer launch de forma local con visualstudiocode
 #if __name__ == "__main__":
     #app.run(host="127.0.0.1", port=7860, debug=False)
+
 
 
 
