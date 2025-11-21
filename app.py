@@ -13,16 +13,8 @@ app = Flask(__name__, template_folder='.')
 
 # Cargar variables de entorno
 load_dotenv()
-try:
-    API_KEY = os.getenv("OPENAI_API_KEY")
-    if not API_KEY or not API_KEY.startswith("sk-"):
-        raise RuntimeError("Falta OPENAI_API_KEY en .env o tiene formato inválido (debe empezar con 'sk-').")
-    print("✅ API Key cargada correctamente.")
-except Exception as e:
-    print(f"❌ Error al cargar API Key: {e}")
 
-
-#if not API_KEY or not API_KEY.startswith("sk-"):
+if not API_KEY or not API_KEY.startswith("sk-"):
     #raise RuntimeError("Falta OPENAI_API_KEY en .env o tiene formato inválido (debe empezar con 'sk-').")
 
 client = OpenAI(api_key=API_KEY)
@@ -165,6 +157,7 @@ def process():
 #Para hacer launch de forma local con visualstudiocode
 #if __name__ == "__main__":
     #app.run(host="127.0.0.1", port=7860, debug=False)
+
 
 
 
